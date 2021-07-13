@@ -60,6 +60,21 @@ namespace WebApi.Migrations
 
                     b.ToTable("Facturas");
                 });
+
+            modelBuilder.Entity("WebApi.Models.Productos", b =>
+                {
+                    b.Property<int>("idProducto")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Producto")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("idProducto");
+
+                    b.ToTable("Productos");
+                });
 #pragma warning restore 612, 618
         }
     }

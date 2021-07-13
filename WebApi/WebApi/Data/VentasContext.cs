@@ -15,5 +15,7 @@ namespace WebApi.Data
         }
 
         public DbSet<WebApi.Models.Facturas> Facturas { get; set; }
+
+        public DbSet<WebApi.Models.Productos> Productos { get; set; }
     }
 }
